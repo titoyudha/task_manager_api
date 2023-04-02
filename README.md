@@ -33,6 +33,23 @@ DELETE /admin/users/:id - delete a user account (admin only)
 
 ```
 
+## Project Structure
+
+├── cmd
+│   └── server
+├── internal
+│   ├── config
+│   ├── server
+│   │   ├── handler
+│   │   ├── models
+│   │   ├── repository
+│   │   └── routes
+│   └── utils
+├── pkg
+│   ├── auth
+│   └── email
+├── scripts
+└── test
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
