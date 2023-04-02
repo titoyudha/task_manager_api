@@ -34,7 +34,7 @@ DELETE /admin/users/:id - delete a user account (admin only)
 ```
 
 ## Project Structure
-
+.
 ├── cmd
 │   └── server
 ├── internal
