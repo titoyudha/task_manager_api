@@ -14,6 +14,25 @@ A REST API that allows users to manage their tasks, including creating, updating
 #### GoMail for sending email notifications
 #### AWS S3 SDK for uploading and downloading attachments
 
+## Project Structure
+
+├── cmd
+│   └── server
+├── internal
+│   ├── config
+│   ├── server
+│   │   ├── handler
+│   │   ├── models
+│   │   ├── repository
+│   │   └── routes
+│   └── utils
+├── pkg
+│   ├── auth
+│   └── email
+├── scripts
+└── test
+
+
 
 ## API Reference
 
@@ -71,5 +90,24 @@ DELETE /admin/users/:id - delete a user account (admin only)
 | `todo_id` | `int` | **Required**. Id of todo to update | task id |
 
 
+## Run
 
+Step to run this api to your local machine
+
+```bash
+  mkdir task_manager_api
+  cd task_manager_api
+  git clone https://github.com/titoyudha/   task_manager_api.git
+  change .env files with your configuration
+  run go mod tidy
+  go run main.go
+```
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+    
 
