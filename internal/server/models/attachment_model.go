@@ -2,13 +2,12 @@ package models
 
 import (
 	"time"
-
-	"github.com/google/uuid"
 )
 
 type Attachment struct {
-	ID        uuid.UUID `json:"id"`
-	TaskID    uuid.UUID `json:"task_id"`
+	ID        int64     `gorm:"primaryKey" json:"id"`
+	TaskID    int64     `gorm:"index" json:"task_id"`
 	Filename  string    `json:"filename"`
 	CreatedAt time.Time `json:"created_at"`
+	Task      Task      `gorm:"foreignKey:TaskID" json:"task"`
 }
